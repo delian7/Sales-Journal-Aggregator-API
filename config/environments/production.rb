@@ -65,6 +65,9 @@ Rails.application.configure do
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
 
   # Use a different cache store in production.
+  # config.cache_store = :mem_cache_store
+  # Normally, we would use a memcached store in production, but for now we are using
+  # a memory store to keep things simple. This should be changed before going live.
   config.cache_store = :memory_store
   config.action_controller.perform_caching = true
 
